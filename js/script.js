@@ -53,7 +53,7 @@ new Vue(
         },
         methods: {
             checkStarIndex: function (index) {
-                if (starred.includes(index)){
+                if (this.starred.includes(index)){
                     return "fas fa-star";
                 } else {
                     return "far fa-star";
