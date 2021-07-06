@@ -15,9 +15,6 @@
        <ul>
            <li v-for="(job, index, key) in jobs">
                <div>
-                {{ job.id }}
-               </div>
-               <div>
                 {{ job.position }}
                </div>
                <div>
@@ -36,10 +33,16 @@
                 {{ job.contract }}
                </div>
 
-               <div @click="clickAndAdd(index)" :class="checkStarIndex(index)">
+               <div @click="clickAndAdd(index)" :class="checkStarIndex(index)"> 
 
                </div>
 
+               <div v-if="index === applied.length">
+                   <button>Applay</button>   
+               </div>
+               <div v-else>
+                    <button>fatto</button> 
+               </div>
                <hr>
 
             </li>
