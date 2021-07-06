@@ -58,7 +58,15 @@ new Vue(
                 } else {
                     return "far fa-star";
                 }
-            }
+            },
+            clickAndAdd: function (index) {
+                if (!this.starred.includes(index)){
+                    this.starred.push(index);
+                    
+                } else {
+                    this.starred.splice(index, 1);
+                }
+            },
         },
 
     }

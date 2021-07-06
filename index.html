@@ -36,8 +36,8 @@
                 {{ job.contract }}
                </div>
 
-               <div :class="checkStarIndex(index)">
-                   
+               <div @click="clickAndAdd(index)" :class="checkStarIndex(index)">
+
                </div>
 
                <hr>
