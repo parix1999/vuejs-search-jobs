@@ -15,8 +15,18 @@
        <ul>
            <li v-for="item in jobs">
                 <div v-for="(description, key) in item">
-                    {{key}}: {{description}}
+                    <strong>{{key}}</strong>: {{description}}
                 </div>
+                <div v-for="(element, index) in jobs">
+                    <!-- <i class="fas fa-star"></i> -->
+                    {{index}}
+                </div>
+                
+                <!-- <div>
+                    <button>Invia CV</button>
+                </div> -->
+                
+                <hr>
             </li>
 
        </ul> 
