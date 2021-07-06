@@ -52,7 +52,13 @@ new Vue(
             
         },
         methods: {
-
+            checkStarIndex: function (index) {
+                if (index.includes(starred)){
+                    return "fas fa-star";
+                } else {
+                    return "far fa-star";
+                }
+            }
         },
 
     }
