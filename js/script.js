@@ -64,7 +64,8 @@ new Vue(
                     this.starred.push(index);
                     
                 } else {
-                    this.starred.splice(index, 1);
+                    this.starred.splice(index,1);
+                    // ToDo, vedere di far funzionare l'eliminazione della stella;
                 }
             },
         },
