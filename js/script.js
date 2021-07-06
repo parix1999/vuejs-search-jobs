@@ -3,7 +3,7 @@ Vue.config.devtools = true;
 new Vue(
     {
         el:'#app',
-        data:{
+        data:{ 
             jobs: [
                 {
                   id: 1,

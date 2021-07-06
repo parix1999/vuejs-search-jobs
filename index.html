@@ -13,25 +13,37 @@
     
     <div id="app">
        <ul>
-           <li v-for="item in jobs">
-                <div v-for="(description, key) in item">
-                    <strong>{{key}}</strong>: {{description}}
-                </div>
-                <div v-for="(element, index) in jobs">
-                    <div :class="checkStarIndex(index)"></div>
-                    <!-- <i class="fas fa-star"></i> -->
-                    <!-- {{index}} -->
-                    <!-- <i class="far fa-star"></i> -->
-                </div>
-                
-                <!-- <div>
-                    <button>Invia CV</button>
-                </div> -->
-                
-                <hr>
-            </li>
+           <li v-for="(job, index, key) in jobs">
+               <div>
+                {{ job.id }}
+               </div>
+               <div>
+                {{ job.position }}
+               </div>
+               <div>
+                {{ job.description }}
+               </div>
+               <div>
+                {{ job.created_at }}
+               </div>
+               <div>
+                {{ job.logo }}
+               </div>
+               <div>
+                {{ job.city }}
+               </div>
+               <div>
+                {{ job.contract }}
+               </div>
 
-       </ul> 
+               <div :class="checkStarIndex(index)">
+                   
+               </div>
+
+               <hr>
+
+            </li>
+       </ul>
 
 
     </div>
