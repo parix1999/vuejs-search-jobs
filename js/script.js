@@ -62,28 +62,17 @@ new Vue(
             
         },
         methods: {
-            checkStarIndex: function (index) {
-                if (this.starred.includes(index)){
-                    console.log(index)
+            preferiti: function(id) {
+                /* Se l'id corrisponde al numero presente
+                dentro alla array starred allora è un 
+                preferito:*/
+                if (this.starred.includes(id)) {
                     return "fas fa-star";
-                } else {
-                    return "far fa-star";
-                }
-            },
-            clickAndAdd: function (index) {
-                if (!this.starred.includes(index)){
-                    this.starred.push(index);
-                    
-                }
-            },
-            applayList: function (index) {
-                if (this.applied.includes(index)) {
-                    return 
-
                 }
 
-            },
-        },
+
+            }
+        }
 
     }
-)
+);
