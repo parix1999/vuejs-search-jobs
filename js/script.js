@@ -80,6 +80,8 @@ new Vue(
                 grazie alla condizione della funzione preferiti: */
                 if (!this.starred.includes(id)) {
                     this.starred.push(id);
+                } else {            
+                    this.starred.splice(this.starred.indexOf(id), 1)
                 }
             },
             buttonCheck: function(id) {
@@ -92,7 +94,15 @@ new Vue(
                     return this.nonApplicato;
                 }
             },
-
+            checkDomanda: function(id) {
+                /* Se l'id è presente dentro alla array dei 
+                preferiti allora, mi si stampa apply e non succede
+                niente, mentre se clicco per fare domanda allora,
+                tolgo quel'id dall' array preferiti e ci metto applied */
+                if (!this.starred.includes(id)) {
+                    this.starred.splice(this.starred.indexOf(id), 1);
+                }
+            }
         }
         
     }
