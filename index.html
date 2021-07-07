@@ -16,11 +16,20 @@
             <li v-for="(value, name) in item">
                 {{ name }} : {{ value }}
             </li>
+            <!-- Icona preferiti -->
             <li>
                 <div :class="preferiti(item.id)"
-                @click="addPreferiti(item.id)">
-
+                    @click="addPreferiti(item.id)">
+                
                 </div>
+            </li>
+            <!-- Bottone Apply or Applied -->
+            <li>
+                <button v-html="buttonCheck(item.id)">
+                    
+                </button>
+                
+
             </li>
             <hr>
             

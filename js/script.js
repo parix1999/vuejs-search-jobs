@@ -58,7 +58,9 @@ new Vue(
                   
             ],
             starred: [1, 2, 3],
-            applied: [4, 5]
+            applied: [4, 5],
+            nonApplicato: 'Apply',
+            Applicato: 'Applied',
             
         },
         methods: {
@@ -79,8 +81,18 @@ new Vue(
                 if (!this.starred.includes(id)) {
                     this.starred.push(id);
                 }
+            },
+            buttonCheck: function(id) {
+                /*Se l'id è presente dentro alla array di starred
+                allora mi stampi Applied come bottone, altrimenti
+                Apply */
+                if (this.starred.includes(id)) {
+                    return this.nonApplicato;
+                } else {
+                    return this.Applicato;
+                }
             }
         }
-
+        
     }
 );
