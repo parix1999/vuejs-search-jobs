@@ -68,9 +68,17 @@ new Vue(
                 preferito:*/
                 if (this.starred.includes(id)) {
                     return "fas fa-star";
+                } else {
+                    return "far fa-star"
                 }
-
-
+            },
+            addPreferiti: function(id) {
+                /* Se l'id non è dentro alla array dei preferiti
+                allora mi pushi l'id all'inteno e mi cambi il simbolo
+                grazie alla condizione della funzione preferiti: */
+                if (!this.starred.includes(id)) {
+                    this.starred.push(id);
+                }
             }
         }
 
