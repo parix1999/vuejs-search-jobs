@@ -86,12 +86,13 @@ new Vue(
                 /*Se l'id è presente dentro alla array di starred
                 allora mi stampi Applied come bottone, altrimenti
                 Apply */
-                if (this.starred.includes(id)) {
-                    return this.nonApplicato;
-                } else {
+                if (this.applied.includes(id)) {
                     return this.Applicato;
+                } else {
+                    return this.nonApplicato;
                 }
-            }
+            },
+
         }
         
     }
