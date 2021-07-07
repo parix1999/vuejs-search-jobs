@@ -99,8 +99,10 @@ new Vue(
                 preferiti allora, mi si stampa apply e non succede
                 niente, mentre se clicco per fare domanda allora,
                 tolgo quel'id dall' array preferiti e ci metto applied */
-                if (!this.starred.includes(id)) {
-                    this.starred.splice(this.starred.indexOf(id), 1);
+                if (this.starred.includes(id)) {
+                    this.starred.splice(this.starred.indexOf(id), 1)
+                    this.applied.push(id)
+        
                 }
             }
         }
